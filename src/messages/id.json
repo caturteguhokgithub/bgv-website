@@ -1,0 +1,14 @@
+{
+  "navbar": {
+    "home": "beranda",
+    "about": "tentang kami",
+    "product": "produk",
+    "promo": "promo",
+    "collaboration": "kolaborasi",
+    "faq": "faq",
+    "helpCenter": "pusat bantuan"
+  },
+  "home": {
+    "title": "judul"
+  }
+}

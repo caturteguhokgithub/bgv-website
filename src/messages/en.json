@@ -1,0 +1,14 @@
+{
+  "navbar": {
+    "home": "home",
+    "about": "about",
+    "product": "product",
+    "promo": "promo",
+    "collaboration": "collaboration",
+    "faq": "faq",
+    "helpCenter": "help Center"
+  },
+  "home": {
+    "title": "title"
+  }
+}

@@ -1,0 +1,102 @@
+import Link from "next/link";
+import Image from "next/image";
+
+const FooterCol = ({
+  title,
+  data,
+}: {
+  title: string;
+  data: { url: string; label: string }[];
+}) => {
+  return (
+    <div className="inline-flex flex-col gap-3 text-white">
+      <h3 className="font-semibold">{title}</h3>
+      <ul className="inline-flex flex-col gap-2">
+        {data.map((item, index) => (
+          <li key={index}>
+            <Link
+              href={item.url}
+              className="duration-300 ease-linear hover:text-white/50"
+            >
+              {item.label}
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+};
+
+export default function FooterSection() {
+  return (
+    <footer className="relative z-[2]">
+      <div className="container mx-auto py-20">
+        <section className="flex justify-between items-start gap-20">
+          <div className="flex items-start gap-20">
+            <FooterCol
+              title="Infinitech+ Product"
+              data={[
+                { url: "", label: "Smart Box 3 in 1" },
+                { url: "", label: "OTT Channels" },
+                { url: "", label: "Internet Provider" },
+              ]}
+            />
+            <FooterCol
+              title="Infinitech+ Business"
+              data={[
+                { url: "", label: "Official Partnership" },
+                { url: "", label: "Official Store" },
+                { url: "", label: "Freelance Agency" },
+              ]}
+            />
+            <FooterCol
+              title="General"
+              data={[
+                { url: "", label: "Privacy Policy" },
+                { url: "", label: "Terms of Service" },
+                { url: "", label: "Legal Disclaimer" },
+              ]}
+            />
+            <FooterCol
+              title="Others"
+              data={[
+                { url: "", label: "Location" },
+                { url: "", label: "Retur" },
+                { url: "", label: "Careers" },
+              ]}
+            />
+          </div>
+          <div className="inline-flex flex-col gap-3 text-white">
+            <h3 className="font-semibold">Download Infinitech+ di</h3>
+            <div className="inline-flex gap-3">
+              <Image
+                alt="BGV Website"
+                src={`/images/download-google-play.png`}
+                width={0}
+                height={0}
+                sizes="100vw"
+                priority
+                style={{
+                  width: "auto",
+                  height: "60px",
+                }}
+              />
+              <Image
+                alt="BGV Website"
+                src={`/images/download-app-store.png`}
+                width={0}
+                height={0}
+                sizes="100vw"
+                priority
+                style={{
+                  width: "auto",
+                  height: "60px",
+                }}
+              />
+            </div>
+          </div>
+        </section>
+      </div>
+    </footer>
+  );
+}
