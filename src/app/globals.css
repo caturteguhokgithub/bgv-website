@@ -19,11 +19,7 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif; */
   /* background: linear-gradient(to bottom, #674571, #223158); */
-  background: linear-gradient(
-      151.3895403340348deg,
-      rgba(0, 0, 0, 0) 20%,
-      #1b4f65 100%
-    ),
+  background: linear-gradient(152deg, rgba(0, 0, 0, 0) 40%, #1b4f65 100%),
     radial-gradient(closest-side, #143460 0, rgba(0, 0, 0, 0) 70%),
     radial-gradient(closest-side, #0f1b39 50%, #4a1a3b 150%);
   background-position: bottom right, 70% 70%, top left;

@@ -1,11 +1,20 @@
-import React from "react";
-import "keen-slider/keen-slider.min.css";
-import { useKeenSlider } from "keen-slider/react";
+import React, { CSSProperties, MouseEventHandler } from "react";
 import Image from "next/image";
-
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Iconify from "@/components/Icon/iconify";
+import { BoxSlider } from "../style";
 export interface DataType {
   image?: string;
   title?: string;
+  url?: string;
+}
+
+interface ArrowProps {
+  className?: string;
+  style?: CSSProperties;
+  onClick?: MouseEventHandler<HTMLDivElement>;
 }
 
 export const data: DataType[] = [
@@ -14,87 +23,85 @@ export const data: DataType[] = [
     title: "Handsome Guys",
   },
   {
-    image: "slider-image",
+    url: "https://picsum.photos/id/111/2879/1215",
     title: "Lost in Love",
   },
   {
-    image: "slider-image",
+    url: "https://picsum.photos/id/164/2879/1215",
     title: "My Love Mix-Up",
   },
   {
-    image: "slider-image",
+    url: "https://picsum.photos/id/454/2879/1215",
     title: "How to Spot a Red Flag",
   },
   {
-    image: "slider-image",
+    url: "https://picsum.photos/id/444/2879/1215",
     title: "Running Man",
   },
 ];
 
-export const CardItem = ({ image }: { image?: string }) => {
+export const CardItem = ({ image, url }: { image?: string; url?: string }) => {
   return (
-    <div className="relative">
+    <div className="relative flex justify-center items-center">
       <Image
         alt="BGV"
-        src={`/images/${image}.jpg`}
+        src={url ? `${url}` : `/images/${image}.jpg`}
         width={0}
         height={0}
         sizes="100vw"
         style={{
           width: "100%",
           height: "auto",
+          objectPosition: "center",
+          objectFit: "cover",
         }}
       />
     </div>
   );
 };
 
-export default function SectionBaner() {
-  const [currentSlide, setCurrentSlide] = React.useState(0);
-  const [loaded, setLoaded] = React.useState(false);
-  const [sliderRef, instanceRef] = useKeenSlider<HTMLDivElement>({
-    initial: 0,
-    slideChanged(slider) {
-      setCurrentSlide(slider.track.details.rel);
-    },
-    created() {
-      setLoaded(true);
-    },
-  });
+export default function SectionBanner() {
+  function NextArrow(props: ArrowProps) {
+    const { className, style, onClick } = props;
+    return (
+      <div className={className} style={{ ...style }} onClick={onClick}>
+        <Iconify name="mdi:chevron-right" size={70} color="white" />
+      </div>
+    );
+  }
+
+  function PrevArrow(props: ArrowProps) {
+    const { className, style, onClick } = props;
+    return (
+      <div className={className} style={{ ...style }} onClick={onClick}>
+        <Iconify name="mdi:chevron-left" size={70} color="white" />
+      </div>
+    );
+  }
+
+  const settings = {
+    dots: true,
+    fade: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    waitForAnimate: false,
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />,
+  };
 
   return (
     <div className="relative">
-      <div ref={sliderRef} className="keen-slider">
-        {data.map((item, index) => (
-          <div className={`keen-slider__slide cursor-pointer`} key={index}>
-            <CardItem image={item.image} />
-          </div>
-        ))}
-      </div>
-      <div className="absolute bottom-[16px] left-1/2 -translate-x-0.5">
-        {loaded && instanceRef.current && (
-          <div className="inline-flex flex-row justify-center items-center gap-2">
-            {[
-              ...Array(instanceRef.current.track.details.slides.length).keys(),
-            ].map((idx) => {
-              return (
-                <div key={idx}>
-                  <button
-                    onClick={() => {
-                      instanceRef.current?.moveToIdx(idx);
-                    }}
-                    className={
-                      `duration-500 ease-in-out dot p-0 m-0 min-w-0 w-[16px] h-[16px] rounded-full ${
-                        currentSlide === idx ? "bg-blue-600" : "bg-blue-600/20"
-                      }` + (currentSlide === idx ? " active" : "")
-                    }
-                  ></button>
-                </div>
-              );
-            })}
-          </div>
-        )}
-      </div>
+      <BoxSlider className={`slider-container`}>
+        <Slider {...settings}>
+          {data.map((item, index) => (
+            <div key={index}>
+              <CardItem image={item.image} url={item.url} />
+            </div>
+          ))}
+        </Slider>
+      </BoxSlider>
     </div>
   );
 }

@@ -6,6 +6,14 @@ import type { NextConfig } from "next";
 const withNextIntl = createNextIntlPlugin("./src/i18n.ts");
 
 const nextConfig: NextConfig = {
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "picsum.photos",
+      },
+    ],
+  },
   // i18n: {
   //   locales: ["en", "id"],
   //   defaultLocale: "en",

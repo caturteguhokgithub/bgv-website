@@ -4,6 +4,7 @@ import { useTranslations } from "next-intl";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { motion } from "motion/react";
+import { UnderlineAnimation } from "@/app/[locale]/home/style";
 
 export default function HeaderSection() {
   const t = useTranslations("navbar");
@@ -56,7 +57,7 @@ export default function HeaderSection() {
             />
           </motion.div>
           <div className="flex gap-20">
-            <nav className="flex items-center gap-10 bg-black/35 rounded-full px-8 py-3">
+            <UnderlineAnimation className="flex items-center gap-10 bg-black/35 rounded-full px-8 py-3">
               {navItems.map((item) => (
                 <div
                   key={item.name}
@@ -69,9 +70,9 @@ export default function HeaderSection() {
                   <Link href={item.path}>{t(item.name)}</Link>
                 </div>
               ))}
-            </nav>
+            </UnderlineAnimation>
             <nav className="flex items-center gap-3 bg-black/35 rounded-full px-8 py-3">
-              <div className="inline-flex items-center gap-2">
+              <UnderlineAnimation className="inline-flex items-center gap-2">
                 <div
                   className={`${
                     isActive("id") ? "text-white font-bold" : "text-white/60"
@@ -87,7 +88,7 @@ export default function HeaderSection() {
                 >
                   <Link href={`/en/${path}`}>EN</Link>
                 </div>
-              </div>
+              </UnderlineAnimation>
               <div className="inline-flex items-center gap-3">
                 <Iconify name="ph:instagram-logo" color="white" size={24} />
                 <Iconify name="mingcute:tiktok-line" color="white" size={24} />

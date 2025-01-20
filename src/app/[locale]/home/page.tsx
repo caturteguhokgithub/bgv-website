@@ -1,12 +1,14 @@
 "use client";
 
 import LayoutWeb from "@/components/layouts/page";
-import SectionBaner from "./partials/banner";
+import SectionBanner from "./partials/banner";
+import SectionExperience from "./partials/experience";
 
 export default function HomePage() {
   return (
     <LayoutWeb>
-      <SectionBaner />
+      <SectionBanner />
+      <SectionExperience />
     </LayoutWeb>
   );
 }
