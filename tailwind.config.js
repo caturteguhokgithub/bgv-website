@@ -12,11 +12,11 @@ module.exports = {
     extend: {
       fontFamily: {
         oswald: ["Graphik", "sans-serif"],
-        serif: ["Merriweather", "serif"],
       },
       colors: {
         "yellow-light-arava": "#EFD46D",
         "yellow-dark-arava": "#BF8C2E",
+        "green-neon": "#00eec6",
       },
     },
   },

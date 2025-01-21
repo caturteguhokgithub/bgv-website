@@ -40,8 +40,8 @@ const ItemExp = ({
   desc: string;
 }) => {
   return (
-    <div className="flex flex-col gap-6 items-center justify-between">
-      <div className="flex flex-col gap-6 items-center">
+    <div className="flex flex-col items-center justify-between gap-6">
+      <div className="flex flex-col items-center gap-6">
         <Image
           alt="BGV Website"
           src={`/images/${img}.jpg`}
@@ -49,6 +49,7 @@ const ItemExp = ({
           height={0}
           sizes="100vw"
           priority
+          className="max-[1279.98px]:!h-[300px] max-[639.98px]:!h-[200px]"
           style={{
             width: "100%",
             height: "400px",
@@ -73,19 +74,19 @@ const ItemExp = ({
 export default function SectionExperience() {
   return (
     <div className="relative z-[2]">
-      <div className="container mx-auto py-20">
+      <div className="container mx-auto py-20 max-[1027.98px]:py-10 max-[859.98px]:px-4">
         <div className="flex flex-col gap-10">
-          <div className="flex flex-col gap-3 text-white text-center">
+          <div className="flex flex-col gap-3 text-center text-white">
             <h2 className="text-4xl font-bold">
               Pengalaman Terbaik dengan Infinitech+
             </h2>
-            <p className="max-w-[48vw] mx-auto">
+            <p className="max-w-[48vw] mx-auto max-[859.98px]:max-w-full max-[859.98px]:px-4">
               Nikmati hari-harimu dengan pengalaman terbaik dalam streaming,
               bermain game dan browsing dengan koneksi internet cepat tanpa
               batas dan WiFi stabil dan kuat diaman kamu berada.
             </p>
           </div>
-          <div className="grid grid-cols-3 gap-10 max-w-[60vw] mx-auto">
+          <div className="grid grid-cols-3 gap-10 max-w-[60vw] mx-auto max-[1027.98px]:max-w-full max-[859.98px]:gap-4">
             <ItemExp
               img="exp-stb"
               title="Smart Box 3 in 1"

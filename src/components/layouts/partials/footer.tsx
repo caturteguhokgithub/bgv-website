@@ -31,10 +31,10 @@ const FooterCol = ({
 export default function FooterSection() {
   return (
     <footer className="relative z-[2]">
-      <div className="container mx-auto py-8">
+      <div className="container py-8 mx-auto max-[679.98px]:px-4">
         <div className="flex flex-col gap-8">
-          <section className="flex justify-between items-start gap-20">
-            <UnderlineAnimation className="flex items-start gap-20">
+          <section className="flex items-start justify-between gap-20 max-[1199.98px]:flex-col max-[1199.98px]:gap-10">
+            <UnderlineAnimation className="grid grid-cols-4 gap-20 max-[575.98px]:grid-cols-2 max-[575.98px]:gap-10 max-[575.98px]:w-full">
               <FooterCol
                 title="Infinitech+ Product"
                 data={[
@@ -99,7 +99,7 @@ export default function FooterSection() {
             </div>
           </section>
           <hr className="bg-white/70 h-[2px] w-full border-none"></hr>
-          <p className="text-white/70 text-center">
+          <p className="text-center text-white/70">
             Copyright &copy; {new Date().getFullYear()} Infinitech+. All Rights
             Reserved.
           </p>
