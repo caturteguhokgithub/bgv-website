@@ -32,7 +32,7 @@ export default function HeaderSection() {
   return (
     <Fragment>
       <header className="relative z-[2]">
-        <div className="container py-6 mx-auto max-[679.98px]:px-4">
+        <div className="container py-6 mx-auto max-[1023.98px]:py-4 max-[679.98px]:px-4">
           <div className="flex items-center justify-between">
             <motion.div
               exit={{
@@ -56,6 +56,7 @@ export default function HeaderSection() {
                 height={0}
                 sizes="100vw"
                 priority
+                className="max-[1023.98px]:!h-[50px]"
                 style={{
                   width: "auto",
                   height: "60px",
@@ -132,7 +133,35 @@ export default function HeaderSection() {
       </header>
 
       <Drawer isOpen={isOpen} setIsOpen={setIsOpen}>
-        Tes
+        <div className="flex flex-col justify-between h-full px-6 py-7">
+          <UnderlineAnimation className="flex flex-col gap-6">
+            {navItems.map((item) => (
+              <div
+                key={item.name}
+                className={`capitalize ${
+                  pathname.includes(item.path)
+                    ? "text-white font-bold"
+                    : "text-white/80"
+                }`}
+              >
+                <Link href={item.path}>{t(item.name)}</Link>
+              </div>
+            ))}
+          </UnderlineAnimation>
+          <div className="flex flex-col gap-4">
+            <p className="text-white/70">Our Social Media</p>
+            <ul className="flex flex-col gap-3">
+              <li className="inline-flex items-center gap-2">
+                <Iconify name="ph:instagram-logo" color="white" size={24} />
+                <span className="text-white">infinitech</span>
+              </li>
+              <li className="inline-flex items-center gap-2">
+                <Iconify name="mingcute:tiktok-line" color="white" size={24} />
+                <span className="text-white">@infinitech</span>
+              </li>
+            </ul>
+          </div>
+        </div>
       </Drawer>
     </Fragment>
   );

@@ -11,13 +11,13 @@ const FooterCol = ({
 }) => {
   return (
     <div className="inline-flex flex-col gap-3 text-white">
-      <h3 className="font-semibold">{title}</h3>
+      <h3 className="font-semibold max-[767.98px]:text-sm">{title}</h3>
       <ul className="inline-flex flex-col gap-2">
         {data.map((item, index) => (
           <li key={index}>
             <Link
               href={item.url}
-              className="duration-300 ease-linear hover:text-white/80"
+              className="duration-300 ease-linear hover:text-white/80 max-[767.98px]:text-sm"
             >
               {item.label}
             </Link>
@@ -69,7 +69,9 @@ export default function FooterSection() {
               />
             </UnderlineAnimation>
             <div className="inline-flex flex-col gap-3 text-white">
-              <h3 className="font-semibold">Download Infinitech+ di</h3>
+              <h3 className="font-semibold max-[767.98px]:text-sm">
+                Download Infinitech+ di
+              </h3>
               <div className="inline-flex gap-3">
                 <Image
                   alt="BGV Website"
@@ -99,7 +101,7 @@ export default function FooterSection() {
             </div>
           </section>
           <hr className="bg-white/70 h-[2px] w-full border-none"></hr>
-          <p className="text-center text-white/70">
+          <p className="text-center text-white/70 max-[767.98px]:text-sm">
             Copyright &copy; {new Date().getFullYear()} Infinitech+. All Rights
             Reserved.
           </p>

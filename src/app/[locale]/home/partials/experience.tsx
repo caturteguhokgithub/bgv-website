@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import { WrapperExperience } from "../style";
 
 export interface DataType {
   image?: string;
@@ -49,7 +50,7 @@ const ItemExp = ({
           height={0}
           sizes="100vw"
           priority
-          className="max-[1279.98px]:!h-[300px] max-[639.98px]:!h-[200px]"
+          className="max-[1279.98px]:!h-[300px] max-[639.98px]:!h-[300px]"
           style={{
             width: "100%",
             height: "400px",
@@ -58,8 +59,10 @@ const ItemExp = ({
           }}
         />
         <div className="flex flex-col gap-3 text-center">
-          <h3 className="text-3xl text-[#00EEC6] font-bold">{title}</h3>
-          <p className="text-white">{desc}</p>
+          <h3 className="text-3xl text-[#00EEC6] font-bold max-[767.98px]:text-2xl">
+            {title}
+          </h3>
+          <p className="text-white max-[767.98px]:text-sm">{desc}</p>
         </div>
       </div>
       <div>
@@ -77,16 +80,16 @@ export default function SectionExperience() {
       <div className="container mx-auto py-20 max-[1027.98px]:py-10 max-[859.98px]:px-4">
         <div className="flex flex-col gap-10">
           <div className="flex flex-col gap-3 text-center text-white">
-            <h2 className="text-4xl font-bold">
+            <h2 className="text-4xl font-bold max-[767.98px]:text-3xl">
               Pengalaman Terbaik dengan Infinitech+
             </h2>
-            <p className="max-w-[48vw] mx-auto max-[859.98px]:max-w-full max-[859.98px]:px-4">
+            <p className="max-w-[48vw] mx-auto max-[859.98px]:max-w-full max-[859.98px]:px-4 max-[767.98px]:text-sm">
               Nikmati hari-harimu dengan pengalaman terbaik dalam streaming,
               bermain game dan browsing dengan koneksi internet cepat tanpa
               batas dan WiFi stabil dan kuat diaman kamu berada.
             </p>
           </div>
-          <div className="grid grid-cols-3 gap-10 max-w-[60vw] mx-auto max-[1027.98px]:max-w-full max-[859.98px]:gap-4">
+          <WrapperExperience className="grid grid-cols-3 gap-10 max-w-[60vw] mx-auto max-[1027.98px]:max-w-full max-[859.98px]:gap-4 overflow-x-auto max-[767.98px]:grid-cols-[repeat(3,_minmax(300px,_1fr))]">
             <ItemExp
               img="exp-stb"
               title="Smart Box 3 in 1"
@@ -102,7 +105,7 @@ export default function SectionExperience() {
               title="Internet Provider"
               desc="Internet Provider Packages"
             />
-          </div>
+          </WrapperExperience>
         </div>
       </div>
     </div>

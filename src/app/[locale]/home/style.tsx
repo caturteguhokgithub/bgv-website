@@ -1,61 +1,54 @@
 import styled from "@emotion/styled";
+import facepaint from "facepaint";
 
-export const BoxSlider = styled.div({
-  ".slick-prev, .slick-next": {
-    width: "auto",
-    height: "auto",
-    zIndex: 1,
-    opacity: 0.3,
-    transition: "opacity 500ms ease-in-out",
+const breakpoints = [767.98, 1199.98];
 
-    "&:before": {
-      display: "none",
-    },
-    "&:hover": {
-      opacity: 1,
-    },
-  },
-  ".slick-prev": {
-    left: 25,
-  },
-  ".slick-next": {
-    right: 25,
-  },
-  ".slick-dots": {
-    bottom: 32,
+const mq = facepaint(breakpoints.map((bp) => `@media (max-width: ${bp}px)`));
 
-    li: {
-      width: 16,
-      height: 16,
-      margin: "0 3px",
-
-      button: {
-        width: 16,
-        height: 16,
-        "&:before": {
-          width: 16,
-          height: 16,
-          backgroundColor: "#00eec6",
-          borderRadius: "100px",
-          color: "transparent",
-          opacity: 0.3,
-          transition: "opacity 500ms ease-in-out",
-        },
-        "&:hover": {
-          "&:before": {
-            opacity: 1,
-          },
-        },
+export const BoxSlider = styled.div(
+  mq({
+    ".slick-prev, .slick-next": {
+      width: "auto",
+      height: "auto",
+      zIndex: 1,
+      opacity: 0.3,
+      transition: "opacity 500ms ease-in-out",
+      svg: {
+        width: [70, 40],
       },
-      "&.slick-active": {
-        width: 100,
-        transition: "width 500ms ease-in-out",
+
+      "&:before": {
+        display: "none",
+      },
+      "&:hover": {
+        opacity: 1,
+      },
+    },
+    ".slick-prev": {
+      left: [25, 0],
+    },
+    ".slick-next": {
+      right: [25, 0],
+    },
+    ".slick-dots": {
+      bottom: [32, 16],
+
+      li: {
+        width: [16, 8],
+        height: [16, 8],
+        margin: "0 3px",
+
         button: {
+          width: [16, 8],
+          height: [16, 8],
           "&:before": {
-            width: 100,
-            transition: "width 500ms ease-in-out, opacity 500ms ease-in-out",
-            backgroundColor: "white",
-            opacity: 0.8,
+            width: [16, 8],
+            height: [16, 8],
+            backgroundColor: "#00eec6",
+            borderRadius: "100px",
+            color: "transparent",
+            opacity: 0.3,
+            transition: "opacity 500ms ease-in-out",
           },
           "&:hover": {
             "&:before": {
@@ -63,10 +56,27 @@ export const BoxSlider = styled.div({
             },
           },
         },
+        "&.slick-active": {
+          width: [100, 60],
+          transition: "width 500ms ease-in-out",
+          button: {
+            "&:before": {
+              width: [100, 60],
+              transition: "width 500ms ease-in-out, opacity 500ms ease-in-out",
+              backgroundColor: "white",
+              opacity: 0.8,
+            },
+            "&:hover": {
+              "&:before": {
+                opacity: 1,
+              },
+            },
+          },
+        },
       },
     },
-  },
-});
+  })
+);
 
 export const UnderlineAnimation = styled.div({
   a: {
@@ -91,5 +101,12 @@ export const UnderlineAnimation = styled.div({
         left: 0,
       },
     },
+  },
+});
+
+export const WrapperExperience = styled.div({
+  "&::-webkit-scrollbar": {
+    height: 0,
+    width: 0,
   },
 });
