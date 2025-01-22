@@ -63,7 +63,7 @@ export default function HeaderSection() {
                 }}
               />
             </motion.div>
-            <div className="flex gap-20 max-[1279.98px]:gap-4 max-[679.98px]:gap-2">
+            <div className="flex gap-10 max-[1279.98px]:gap-4 max-[679.98px]:gap-2">
               <UnderlineAnimation className="flex items-center gap-10 bg-black/35 rounded-full px-8 py-3 max-[1279.98px]:hidden">
                 {navItems.map((item) => (
                   <div

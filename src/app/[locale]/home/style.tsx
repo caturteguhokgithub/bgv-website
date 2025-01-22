@@ -34,16 +34,16 @@ export const BoxSlider = styled.div(
       bottom: [32, 16],
 
       li: {
-        width: [16, 8],
-        height: [16, 8],
+        width: [12, 8],
+        height: [12, 8],
         margin: "0 3px",
 
         button: {
-          width: [16, 8],
-          height: [16, 8],
+          width: [12, 8],
+          height: [12, 8],
           "&:before": {
-            width: [16, 8],
-            height: [16, 8],
+            width: [12, 8],
+            height: [12, 8],
             backgroundColor: "#00eec6",
             borderRadius: "100px",
             color: "transparent",
@@ -57,11 +57,11 @@ export const BoxSlider = styled.div(
           },
         },
         "&.slick-active": {
-          width: [100, 60],
+          width: [80, 60],
           transition: "width 500ms ease-in-out",
           button: {
             "&:before": {
-              width: [100, 60],
+              width: [80, 60],
               transition: "width 500ms ease-in-out, opacity 500ms ease-in-out",
               backgroundColor: "white",
               opacity: 0.8,

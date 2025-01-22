@@ -32,3 +32,9 @@ body {
 /* #0F1B39 */
 /* #143460 */
 /* #1B4F65 */
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1200px;
+  }
+}

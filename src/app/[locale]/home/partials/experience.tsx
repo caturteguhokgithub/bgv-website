@@ -59,14 +59,14 @@ const ItemExp = ({
           }}
         />
         <div className="flex flex-col gap-3 text-center">
-          <h3 className="text-3xl text-[#00EEC6] font-bold max-[767.98px]:text-2xl">
+          <h3 className="text-3xl text-green-neon font-bold max-[767.98px]:text-2xl">
             {title}
           </h3>
           <p className="text-white max-[767.98px]:text-sm">{desc}</p>
         </div>
       </div>
       <div>
-        <button className="bg-[#00EEC6] px-8 py-2 rounded-lg font-bold hover:bg-[#11806d] duration-300 ease-in-out">
+        <button className="bg-green-neon px-8 py-2 rounded-lg font-bold hover:bg-[#11806d] duration-300 ease-in-out">
           More Info
         </button>
       </div>
@@ -89,7 +89,7 @@ export default function SectionExperience() {
               batas dan WiFi stabil dan kuat diaman kamu berada.
             </p>
           </div>
-          <WrapperExperience className="grid grid-cols-3 gap-10 max-w-[60vw] mx-auto max-[1027.98px]:max-w-full max-[859.98px]:gap-4 overflow-x-auto max-[767.98px]:grid-cols-[repeat(3,_minmax(300px,_1fr))]">
+          <WrapperExperience className="grid grid-cols-3 gap-20 max-w-[70vw] mx-auto max-[1027.98px]:max-w-full max-[1199.98px]:gap-10 max-[1027.98px]:gap-8 overflow-x-auto max-[767.98px]:grid-cols-[repeat(3,_minmax(300px,_1fr))]">
             <ItemExp
               img="exp-stb"
               title="Smart Box 3 in 1"
