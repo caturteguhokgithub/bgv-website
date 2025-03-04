@@ -15,8 +15,22 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Infinitech",
-  description: "#PakeInfinitech+",
+  title: "BNext Experience Before Limit",
+  description: "Experience Before Limit",
+  icons: {
+    icon: [
+      {
+        media: "(prefers-color-scheme: light)",
+        url: "/images/favicon.png",
+        href: "/images/favicon.png",
+      },
+      {
+        media: "(prefers-color-scheme: dark)",
+        url: "/images/favicon.png",
+        href: "/images/favicon.png",
+      },
+    ],
+  },
 };
 
 export default async function RootLayout({

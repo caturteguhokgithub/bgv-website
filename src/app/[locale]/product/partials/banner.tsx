@@ -19,7 +19,7 @@ interface ArrowProps {
 
 export const data: DataType[] = [
   {
-    image: "slider-home-1",
+    image: "slider-product-1",
     title: "Handsome Guys",
   },
   {

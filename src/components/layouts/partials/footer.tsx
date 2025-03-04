@@ -36,15 +36,15 @@ export default function FooterSection() {
           <section className="flex items-start gap-6 max-[1199.98px]:flex-col max-[1199.98px]:gap-10">
             <UnderlineAnimation className="grid grid-cols-4 gap-16 max-[575.98px]:grid-cols-2 max-[575.98px]:gap-10 max-[575.98px]:w-full">
               <FooterCol
-                title="Infinitech+ Product"
+                title="BNEXT Products"
                 data={[
-                  { url: "", label: "Smart Box 3 in 1" },
+                  { url: "", label: "BNEXT Device" },
                   { url: "", label: "OTT Channels" },
                   { url: "", label: "Internet Provider" },
                 ]}
               />
               <FooterCol
-                title="Infinitech+ Business"
+                title="BNEXT Business"
                 data={[
                   { url: "", label: "Official Partnership" },
                   { url: "", label: "Official Store" },
@@ -57,20 +57,22 @@ export default function FooterSection() {
                   { url: "", label: "Privacy Policy" },
                   { url: "", label: "Terms of Service" },
                   { url: "", label: "Legal Disclaimer" },
+                  { url: "", label: "FAQ" },
                 ]}
               />
               <FooterCol
                 title="Others"
                 data={[
                   { url: "", label: "Location" },
-                  { url: "", label: "Retur" },
+                  { url: "", label: "Order Complaints" },
                   { url: "", label: "Careers" },
+                  { url: "", label: "Help Center" },
                 ]}
               />
             </UnderlineAnimation>
             <div className="inline-flex flex-col gap-3 text-white">
               <h3 className="font-semibold max-[767.98px]:text-sm">
-                Download Infinitech+ di
+                Download BNext on
               </h3>
               <div className="inline-flex gap-3">
                 <Image
@@ -102,7 +104,7 @@ export default function FooterSection() {
           </section>
           <hr className="bg-white/70 h-[2px] w-full border-none"></hr>
           <p className="text-center text-white/70 max-[767.98px]:text-sm">
-            Copyright &copy; {new Date().getFullYear()} Infinitech+. All Rights
+            Copyright &copy; {new Date().getFullYear()} BNext. All Rights
             Reserved.
           </p>
         </div>

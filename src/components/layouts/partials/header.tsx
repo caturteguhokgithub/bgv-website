@@ -20,19 +20,19 @@ export default function HeaderSection() {
   const lang = pathname.split("/")[1];
 
   const navItems = [
-    { name: "home", path: `/${lang}/home` },
+    // { name: "home", path: `/${lang}/home` },
     { name: "about", path: `/${lang}/about` },
     { name: "product", path: `/${lang}/product` },
     { name: "promo", path: `/${lang}/promo` },
     { name: "collaboration", path: `/${lang}/collaboration` },
-    { name: "faq", path: `/${lang}/faq` },
-    { name: "helpCenter", path: `/${lang}/help-center` },
+    // { name: "faq", path: `/${lang}/faq` },
+    // { name: "helpCenter", path: `/${lang}/help-center` },
   ];
 
   return (
     <Fragment>
       <header className="relative z-[2]">
-        <div className="container py-6 mx-auto max-[1023.98px]:py-4 max-[679.98px]:px-4">
+        <div className="container py-4 mx-auto max-[1023.98px]:py-4 max-[679.98px]:px-4">
           <div className="flex items-center justify-between">
             <motion.div
               exit={{
@@ -49,19 +49,21 @@ export default function HeaderSection() {
                 transition: { type: "spring", duration: 5 },
               }}
             >
-              <Image
-                alt="BGV Website"
-                src={`/images/logo.png`}
-                width={0}
-                height={0}
-                sizes="100vw"
-                priority
-                className="max-[1023.98px]:!h-[50px]"
-                style={{
-                  width: "auto",
-                  height: "60px",
-                }}
-              />
+              <Link href="/">
+                <Image
+                  alt="BGV Website"
+                  src={`/images/logo-bnext-full.png`}
+                  width={0}
+                  height={0}
+                  sizes="100vw"
+                  priority
+                  className="max-[1023.98px]:!h-[50px]"
+                  style={{
+                    width: "auto",
+                    height: "80px",
+                  }}
+                />
+              </Link>
             </motion.div>
             <div className="flex gap-10 max-[1279.98px]:gap-4 max-[679.98px]:gap-2">
               <UnderlineAnimation className="flex items-center gap-10 bg-black/35 rounded-full px-8 py-3 max-[1279.98px]:hidden">
@@ -153,11 +155,11 @@ export default function HeaderSection() {
             <ul className="flex flex-col gap-3">
               <li className="inline-flex items-center gap-2">
                 <Iconify name="ph:instagram-logo" color="white" size={24} />
-                <span className="text-white">infinitech</span>
+                <span className="text-white">bnext</span>
               </li>
               <li className="inline-flex items-center gap-2">
                 <Iconify name="mingcute:tiktok-line" color="white" size={24} />
-                <span className="text-white">@infinitech</span>
+                <span className="text-white">@bnext</span>
               </li>
             </ul>
           </div>

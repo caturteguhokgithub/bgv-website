@@ -17,6 +17,7 @@ module.exports = {
         "yellow-light-arava": "#EFD46D",
         "yellow-dark-arava": "#BF8C2E",
         "green-neon": "#00eec6",
+        "bnext-orange": "#F2520D",
       },
     },
   },
