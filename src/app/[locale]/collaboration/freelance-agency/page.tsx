@@ -1,12 +1,12 @@
 "use client";
 
 import LayoutWeb from "@/components/layouts/page";
-import SectionCard from "./partials/card";
+import SectionBanner from "./banner";
 
-export default function PromoPage() {
+export default function FreelanceAgencyPage() {
   return (
     <LayoutWeb>
-      <SectionCard />
+      <SectionBanner />
     </LayoutWeb>
   );
 }

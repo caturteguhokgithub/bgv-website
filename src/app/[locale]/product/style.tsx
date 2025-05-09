@@ -7,6 +7,9 @@ const mq = facepaint(breakpoints.map((bp) => `@media (max-width: ${bp}px)`));
 
 export const BoxSlider = styled.div(
   mq({
+    ".slick-slider": {
+      overflow: "hidden !important",
+    },
     ".slick-prev, .slick-next": {
       width: "auto",
       height: "auto",

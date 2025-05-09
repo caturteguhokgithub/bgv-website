@@ -1,9 +1,9 @@
 "use client";
 
 import LayoutWeb from "@/components/layouts/page";
-import SectionCard from "./partials/card";
+import SectionCard from "./card";
 
-export default function PromoPage() {
+export default function AboutDetailPage() {
   return (
     <LayoutWeb>
       <SectionCard />

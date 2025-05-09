@@ -1,17 +1,24 @@
 import React from "react";
 import Image from "next/image";
 import { WrapperExperience } from "../../home/style";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function SectionService() {
   const ItemExp = ({
     img,
     title,
     desc,
+    url,
   }: {
     img: string;
     title: string;
     desc: string;
+    url: string;
   }) => {
+    const pathname = usePathname();
+    const lang = pathname.split("/")[1];
+
     return (
       <div className="flex flex-col items-center justify-between gap-6">
         <div className="relative flex flex-col items-center gap-6">
@@ -46,10 +53,12 @@ export default function SectionService() {
             </h3>
             <p className="text-lg text-white max-[767.98px]:text-sm">{desc}</p>
           </div>
-          <div className="flex justify-center w-full ">
-            <button className="w-[70%] px-8 py-3 font-bold text-white duration-300 ease-in-out rounded-full bg-bnext-orange hover:bg-orange-700">
-              Register
-            </button>
+          <div className="flex justify-center w-full">
+            <Link href={`/${lang}/collaboration/${url}`}>
+              <button className="px-8 py-3 font-bold text-white duration-300 ease-in-out rounded-full bg-bnext-orange hover:bg-orange-700">
+                Register
+              </button>
+            </Link>
           </div>
         </div>
       </div>
@@ -67,16 +76,19 @@ export default function SectionService() {
             img="service-img-1"
             title="Freelance Agency"
             desc="Ubah Waktu Luangmu Jadikan Peluang Penghasilanmu Tanpa Batas!"
+            url="freelance-agency"
           />
           <ItemExp
             img="service-img-2"
             title="Official Store"
             desc="Saatnya Tumbuh Bersama Menjadi Kemitraan Resmi Toko Kami Dan Nikmati Manfaat Tanpa Batas!"
+            url="freelance-agency"
           />
           <ItemExp
             img="service-img-3"
             title="Official Partnership"
             desc="Jadilah Bagian dari Mitra Resmi Kami dan Nikmati Berbagai Keuntungan!"
+            url="freelance-agency"
           />
         </WrapperExperience>
       </div>
