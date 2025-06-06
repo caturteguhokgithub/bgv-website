@@ -40,8 +40,32 @@ const settings = {
   speed: 500,
   slidesToShow: 5,
   slidesToScroll: 1,
+  infinite: true,
   nextArrow: <NextArrow />,
   prevArrow: <PrevArrow />,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 4,
+        slidesToScroll: 1,
+      },
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+      },
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      },
+    },
+  ],
 };
 
 export const data: DataType[] = [
@@ -110,20 +134,21 @@ export default function SectionChannel() {
         height={0}
         sizes="100vw"
         priority
-        style={{
-          width: "100%",
-          height: "auto",
-        }}
+        // style={{
+        //   width: "100%",
+        //   height: "auto",
+        // }}
+        className="w-full h-auto max-[1279.98px]:absolute max-[1279.98px]:w-full max-[1279.98px]:h-full max-[1279.98px]:object-cover"
       />
-      <div className="absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] container mx-auto py-20 max-[1027.98px]:py-10 max-[859.98px]:px-4 z-[2]">
-        <div className="flex items-center gap-10">
-          <div className="flex flex-col gap-3 text-left text-white">
+      <div className="absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] container mx-auto py-20 max-[1027.98px]:py-10 max-[859.98px]:px-4 z-[2] max-[1279.98px]:relative max-[1279.98px]:top-0 max-[1279.98px]:left-0 max-[1279.98px]:translate-x-0 max-[1279.98px]:translate-y-0">
+        <div className="flex items-center gap-10 max-[1279.98px]:flex-col">
+          <div className="flex flex-col gap-3 text-left text-white max-[1279.98px]:text-center">
             <p className="text-lg max-w-[48vw] mx-auto max-[859.98px]:max-w-full max-[859.98px]:px-4 max-[767.98px]:text-sm">
-              Beragam pilihan spesial aplikasi film, hiburan dan gamas
+              Beragam pilihan spesial aplikasi film, hiburan dan games
               favoritmu.
             </p>
           </div>
-          <BoxSlider className="slider-container max-w-[100vw] overflow-hidden w-full">
+          <BoxSlider className="slider-container max-w-[100vw] overflow-hidden w-full slider-channel">
             <Slider {...settings}>
               {data.map((item, index) => (
                 <div key={index}>

@@ -21,7 +21,7 @@ export default function SectionService() {
 
     return (
       <div className="flex flex-col items-center justify-between gap-6">
-        <div className="relative flex flex-col items-center gap-6">
+        <div className="relative flex flex-col items-center gap-6  max-[1199.98px]:w-full">
           <Image
             alt="BNEXT"
             src={`/images/${img}.jpg`}
@@ -71,7 +71,7 @@ export default function SectionService() {
         <h3 className="text-3xl text-white font-bold max-[767.98px]:text-2xl text-center mb-10">
           Pilih Jenis Layanan Sesuai Kebutuhan Usaha Anda
         </h3>
-        <WrapperExperience className="grid grid-cols-3 gap-20 max-w-[70vw] mx-auto max-[1027.98px]:max-w-full max-[1199.98px]:gap-10 max-[1027.98px]:gap-8 overflow-x-auto max-[767.98px]:grid-cols-[repeat(3,_minmax(300px,_1fr))]">
+        <WrapperExperience className="grid grid-cols-3 gap-20 max-w-[70vw] mx-auto max-[1027.98px]:max-w-full max-[1199.98px]:gap-10 max-[1027.98px]:gap-8 overflow-x-auto max-[767.98px]:grid-cols-[repeat(3,_minmax(300px,_1fr))] max-[1199.98px]:max-w-full">
           <ItemExp
             img="service-img-1"
             title="Freelance Agency"

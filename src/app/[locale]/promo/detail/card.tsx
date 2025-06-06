@@ -13,7 +13,7 @@ export default function SectionCard() {
               Partnership
             </p>
           </div>
-          <div className="flex flex-col gap-8 max-w-[50%] mx-auto">
+          <div className="flex flex-col gap-8 max-w-[50%] mx-auto max-[991.98px]:max-w-[70vw] max-[767.98px]:max-w-[80vw] max-[767.98px]:gap-6 max-[575.98px]:max-w-[100vw]">
             <div className="relative after:content-[''] after:block after:pb-[100%]">
               <Image
                 alt="bnext"
@@ -29,7 +29,7 @@ export default function SectionCard() {
                 }}
               />
             </div>
-            <div className="bg-white rounded-2xl flex flex-col gap-4 px-8 py-6 ">
+            <div className="bg-white rounded-2xl flex flex-col gap-4 px-8 py-6 max-[767.98px]:px-6">
               <div className="flex flex-col gap-1">
                 <span className="text-sm text-gray-500 font-semibold">
                   Program

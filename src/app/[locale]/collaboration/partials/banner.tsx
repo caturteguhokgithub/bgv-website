@@ -11,6 +11,7 @@ export default function SectionBanner() {
         height={0}
         sizes="100vw"
         priority
+        className="max-[1023.98px]:!h-[76vh] max-[1023.98px]:object-cover"
         style={{
           width: "100%",
           height: "auto",
@@ -18,7 +19,7 @@ export default function SectionBanner() {
       />
       <div className="absolute top-0 bottom-0 left-0 right-0 flex items-center w-full h-full justify-normal">
         <div className="container mx-auto py-20 max-[1027.98px]:py-10 max-[859.98px]:px-4 text-white h-[70vh] flex flex-col justify-between">
-          <h2 className="text-6xl font-semibold">
+          <h2 className="text-6xl font-semibold max-[1023.98px]:text-5xl max-[859.98px]:text-4xl">
             Gabung Sekarang, jadilah Mitra Resmi dan Raih Keuntungan Tanpa
             Batas!
           </h2>

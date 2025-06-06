@@ -20,16 +20,16 @@ export default function SectionWho() {
                 height: "auto",
               }}
             />
-            <p className="max-[859.98px]:max-w-full max-[859.98px]:px-4 max-[767.98px]:text-sm font-semibold text-left">
+            <p className="max-[859.98px]:max-w-full max-[859.98px]:px-4 max-[767.98px]:text-sm font-semibold text-left max-[767.98px]:p-0">
               Menikmati Fitur Canggih Nggak Harus Mahal
             </p>
-            <p className="max-[859.98px]:max-w-full max-[859.98px]:px-4 max-[767.98px]:text-sm">
+            <p className="max-[859.98px]:max-w-full max-[859.98px]:px-4 max-[767.98px]:text-sm max-[767.98px]:p-0">
               bnext hadir menawarkan 3 in 1 Digital Smart Box Device yang
               memberikan multi fungsi layanan bagi penggunannya dengan
               mengabungkan Set Top Box (STB), Digital Video Broadcasting (DVB) +
               Over The Top (OTT) dan Internet Model dalam satu device.
             </p>
-            <p className="max-[859.98px]:max-w-full max-[859.98px]:px-4 max-[767.98px]:text-sm">
+            <p className="max-[859.98px]:max-w-full max-[859.98px]:px-4 max-[767.98px]:text-sm max-[767.98px]:p-0">
               Misi utama kami memberikan solusi dan kemudahan dengan
               memanfaatkan digital teknologi yang menggabungkan kebutuhan
               modernisasi visual, sehingga dapat menjangkau kebutuhan pengguna
@@ -40,7 +40,7 @@ export default function SectionWho() {
           </div>
           <div className="flex flex-col gap-5 text-white">
             <h2 className="text-2xl font-semibold">milestone</h2>
-            <div className="flex flex-row gap-10 text-xl text-white">
+            <div className="flex flex-row gap-10 text-xl text-white max-[767.98px]:flex-col">
               <Image
                 alt="bnext"
                 src={`/images/map-jakarta.png`}
@@ -58,8 +58,8 @@ export default function SectionWho() {
               <div className="flex flex-col gap-5 text-white">
                 <h2 className="text-2xl font-semibold ">2025</h2>
                 <div className="flex flex-col gap-2 text-white">
-                  <h3 className="text-lg font-semibold ">Headquarters</h3>
-                  <p>
+                  <h3 className="text-lg font-semibold">Headquarters</h3>
+                  <p className="max-[767.98px]:text-base">
                     Centennial Tower Level 29, Unit D-E, Kav. 24-25
                     <br />
                     Jl. Jendral Gatot Subroto No. 27, Karet Semanggi, Setiabudi,
@@ -68,7 +68,7 @@ export default function SectionWho() {
                 </div>
                 <div className="flex flex-col gap-2 text-white">
                   <h3 className="text-lg font-semibold ">Operational Office</h3>
-                  <p>
+                  <p className="max-[767.98px]:text-base">
                     Gedung Jaya – 7 Floor
                     <br />
                     Jl. M.H. Thamrin No.12, RT.2/RW.1, Kb. Sirih, Kec. Menteng,

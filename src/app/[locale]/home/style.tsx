@@ -44,7 +44,7 @@ export const BoxSlider = styled.div(
           "&:before": {
             width: [12, 8],
             height: [12, 8],
-            backgroundColor: "#00eec6",
+            backgroundColor: "#332ccc",
             borderRadius: "100px",
             color: "transparent",
             opacity: 0.3,
@@ -63,7 +63,7 @@ export const BoxSlider = styled.div(
             "&:before": {
               width: [80, 60],
               transition: "width 500ms ease-in-out, opacity 500ms ease-in-out",
-              backgroundColor: "white",
+              backgroundColor: "#e24f1d",
               opacity: 0.8,
             },
             "&:hover": {

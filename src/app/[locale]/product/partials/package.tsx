@@ -27,7 +27,7 @@ const ItemExp = ({
 }) => {
   return (
     <div className="flex flex-col items-center">
-      <BgPurpleGradient className="flex flex-col gap-1 p-6 rounded-3xl rounded-es-none rounded-ee-none">
+      <BgPurpleGradient className="flex flex-col gap-1 p-6 rounded-3xl rounded-es-none rounded-ee-none w-full">
         <Image
           alt="BNEXT"
           src={`/images/logo-bnext-white.png`}
@@ -89,10 +89,11 @@ export default function SectionPackage() {
           width: "100%",
           height: "auto",
         }}
+        className="w-[40%] h-auto max-[1279.98px]:absolute max-[1279.98px]:w-full max-[1279.98px]:!h-full max-[1279.98px]:object-cover max-[1279.98px]:object-left-top"
       />
-      <div className="absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] container mx-auto py-20 max-[1027.98px]:py-10 max-[859.98px]:px-4 z-[2]">
-        <div className="flex items-center gap-10">
-          <div className="flex flex-col gap-3 text-left text-white">
+      <div className="absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] container mx-auto py-20 max-[1027.98px]:py-10 max-[859.98px]:px-4 z-[2] max-[1279.98px]:relative max-[1279.98px]:top-0 max-[1279.98px]:left-0 max-[1279.98px]:translate-x-0 max-[1279.98px]:translate-y-0">
+        <div className="flex items-center gap-10  max-[1279.98px]:flex-col">
+          <div className="flex flex-col gap-3 text-left text-white max-[1279.98px]:text-center">
             <p className="text-lg max-w-[48vw] mx-auto max-[859.98px]:max-w-full max-[859.98px]:px-4 max-[767.98px]:text-sm">
               Warnai hari-harimu dengan layanan internet cepat tanpa batas!
               Sambungkan duniamu dengan kecepatan terbaik

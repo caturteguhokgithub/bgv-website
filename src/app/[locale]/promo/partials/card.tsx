@@ -18,10 +18,10 @@ export default function SectionCard() {
               Partnership
             </p>
           </div>
-          <div className="grid grid-cols-3 gap-8">
+          <div className="grid grid-cols-3 gap-8 max-w-[80vw] mx-auto max-[1027.98px]:max-w-full max-[1199.98px]:gap-10 max-[1027.98px]:gap-8 overflow-y-auto max-[767.98px]:flex max-[767.98px]:gap-6 [&::-webkit-scrollbar]:[height:10px] [&::-webkit-scrollbar-thumb]:bg-gray-500/50">
             {[...new Array(6)].map((_, index) => (
               <Link href={`/${lang}/promo/detail`} key={index}>
-                <div className="bg-white rounded-2xl flex flex-col">
+                <div className="bg-white rounded-2xl flex flex-col max-[767.98px]:min-w-[70vw]">
                   <div className="relative after:content-[''] after:block after:pb-[100%]">
                     <Image
                       alt="bnext"

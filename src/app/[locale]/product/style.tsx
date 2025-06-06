@@ -78,6 +78,21 @@ export const BoxSlider = styled.div(
         },
       },
     },
+    "&.slider-channel": {
+      ".slick-slide": {
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+      },
+      ".slick-arrow": {
+        "&.slick-prev": {
+          left: "-24px",
+        },
+        "&.slick-next": {
+          right: "-24px",
+        },
+      },
+    },
   })
 );
 

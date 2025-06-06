@@ -11,6 +11,7 @@ export default function SectionBanner() {
         height={0}
         sizes="100vw"
         priority
+        className="max-[1023.98px]:!h-[76vh] max-[1023.98px]:object-cover"
         style={{
           width: "100%",
           height: "auto",
@@ -18,7 +19,9 @@ export default function SectionBanner() {
       />
       <div className="absolute top-0 bottom-0 left-0 right-0 flex items-center w-full h-full justify-normal">
         <div className="container mx-auto py-20 max-[1027.98px]:py-10 max-[859.98px]:px-4 text-white h-[60vh] flex flex-col justify-between">
-          <h2 className="font-semibold text-7xl">A Journey</h2>
+          <h2 className="font-semibold text-7xl max-[767.98px]:text-5xl">
+            A Journey
+          </h2>
           <p className="max-[859.98px]:max-w-full max-[859.98px]:px-4 max-[767.98px]:text-sm font-semibold text-2xl">
             Start your adventure with us now and have no limits through the
             history of BNEXT and the people behind it

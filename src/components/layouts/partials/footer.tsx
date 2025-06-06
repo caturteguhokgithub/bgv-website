@@ -86,6 +86,7 @@ export default function FooterSection() {
                     width: "auto",
                     height: "60px",
                   }}
+                  className="max-[767.98px]:!w-[45%] max-[767.98px]:!h-auto"
                 />
                 <Image
                   alt="BGV Website"
@@ -98,6 +99,7 @@ export default function FooterSection() {
                     width: "auto",
                     height: "60px",
                   }}
+                  className="max-[767.98px]:!w-[45%] max-[767.98px]:!h-auto"
                 />
               </div>
             </div>
